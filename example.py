@@ -1,21 +1,15 @@
-class Person:
-    '''this simple code i used'''
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+class Test:
+    x=10
+    def __init__(self):
+        self.y=20
+        self.z=30
+t1=Test()
+t2=Test()
+print('t1:',t1.x,t1.y,t1.z)
+print('t2:',t2.x,t2.y,t2.z)
+t1.x=888
+del Test.x
+t1.y=999
+print('t1:',t1.x,t1.y,t1.z)
+print('t2:',t2.x,t2.y)
 
-
-p = Person('John', 25)
-print(p.name,p.age)
-print(p.__doc__)
-class Person:
-    '''this other code used'''
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-
-if __name__ == '__main__':
-    person = Person('John', 25)
-    print(f"I'm {person.name}. I'm {person.age} years old.")
-print(person.__doc__)
