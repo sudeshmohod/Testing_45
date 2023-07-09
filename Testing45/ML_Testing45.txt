@@ -1,0 +1,460 @@
+Machine Learning:
+
+02/06/2023 ---- Basics.....
+
+Machine Learning - 
+it gives computer the capability to learn without
+being explicitly programmed.
+
+in short ability to learn..
+
+example - robot, driver less cars... 
+Alexa, apple siri, Google Voice Assistance.
+
+it has 3 types:
+1. Supervised machine learning
+2. Unsupervised machine learning 
+3. Reinforcement machine learning
+
+1. Supervised learning:
+It is a type of machine learning method 
+in which we provide sample labeled data to the machine 
+learning system/model in order to train it, 
+and on that basis, it predicts the output.
+
+example -- 
+Supervised learning algorithms are generally 
+used for solving classification and regression problems. 
+
+
+2. Unsupervised learning:
+It is a learning method in which a machine learns 
+withour any supervision(trained/teacher).
+Algorithm needs to act without supervision.
+example - 
+Unsupervised learning is used for solving 
+clustering and association problems.
+cluster - a group of few similar items...
+
+
+3. Reinforcement learning:
+It is a feedback-based learning method, 
+in which a learning agent gets a reward for each right 
+action and gets a penalty for each wrong action.
+examples: driverless cars....teslaa
+ 40-30-20-10 10 speed....
+algorithms are widely used.........
+in the gaming industries to build games. 
+It is also used to train robots to do human tasks.
+
+
+Libraries we are studying:
+1. Numpy - Numerical Python
+2. Pandas - panel data
+3. Matplotlib - data visualization, plots, dashboards.
+4. Scikit Learn.. - ML library...
+**- 1. linear algorithm
+**- 2. logistics algorithm...
+Model/ML System - ML 
+
+you can test this model...... parameter....
+accurancy, speed, correct prediction....
+misclaasifiaction values.....
+
+
+
+
+
+03/06/2023: IDE installation
+
+Jupyter Notebook IDE:-
+before that we can install the new IDE for ML codes:
+
+1. go to this path:
+C:\Users\ADMIN\AppData\Local\Programs
+\Python\Python38\Scripts
+Note: Please verify Your user instead of mine.
+
+
+type 'cmd' in address bar and hit enter.
+it will open the cmd prompt with correct url.
+
+type - pip install jupyter (need internet..)
+
+it will install jupyter notebook in your system
+
+successfully installed...
+
+again open command prompt & type - 'jupyter notebook'
+
+it will open the Jupyter notebook IDE....
+
+understand the User Interface of Jupyter Notebook..
+
+
+
+
+study Numpy in Jupyter Notebook:
+1. Numpy - (Numerical Python)
+NumPy is a Python library used for working with arrays.
+
+How to install inside jupyter notebook:
+
+**syntax----  pip install numpy
+
+
+---------------------------------------------
+22/03/2023 -- Numpy Installation in Jupyter.
+
+command to use in jupyter is:-
+pip install <pkg-name>
+ex: pip install numpy
+!pip install numpy
+
+Note: After installation, restart the notebook kernel.
+
+---to verify its version:
+import numpy as np #alias shortform
+print(np.__version__)
+
+What is numpy:
+It is a python library used to work
+with Arrays.
+it's a array-processing package in Python.
+
+
+it's a pure mathematical library..
+and it has functions to work with
+matrices, Algebra, Fourier transform etc.
+
+basic example:
+
+import numpy
+arr = numpy.array([1,2,3,4,5])
+print(type(arr))
+print(arr)
+
+import numpy
+lis = [1,2,3,4,5]
+arr = numpy.array(lis)
+print(type(arr))
+print(arr)
+
+In python, we have list to serve the purpose of array..
+but they are very slow..
+we built Numpy to provide faster speed to the arrays
+actually numpy is 50X fatser than your python lists.
+
+the array object in NUMPY is called "ndarray"
+ndarray - n-dimentional Array.
+
+why numpy is faster than list?
+
+---> numpy array are stored at one continuous place 
+in memory so other processes can access & manipulate 
+them very efficiently & speedly.
+
+
+
+Dimensions in Array:
+1. 0 - Dimension array:
+
+in 0 D array, scalars or single elements present in the 
+array, [neither row nor columns....]
+Each value in an array is a 0 D array.
+example:
+
+import numpy
+arr = numpy.array(5)
+print(type(arr))
+print(arr)
+
+2. 1 Dimensional array:
+it has array elements present in rows wise... 
+These are the most commonly used arrays in Numpy.
+
+import numpy
+arr = numpy.array([10,20,30,40])
+print(arr)
+
+
+3. 2 Dimensional array:
+its a combination of 1 D array.
+An array which has 1 D array as its element
+is called 2D array.
+
+import numpy
+arr = numpy.array([[1,2,3,4,5,],[10,20,30,40]])
+print(arr)
+
+Final Examples:
+import numpy as np
+ 
+# Creating array object
+arr = np.array( [[ 1, 2, 3],
+                 [ 4, 2, 5]] )
+ 
+print("Array is of type: ", type(arr))
+print("No. of dimensions: ", arr.ndim)
+print("Shape of array: ", arr.shape) 2 by 5 = 10
+print("Size of array: ", arr.size)
+
+0,1,2 D array in one example:
+import numpy as np
+a = np.array(42)
+b = np.array([1, 2, 3, 4, 5])
+c = np.array([[1, 2, 3], [4, 5, 6]])
+print(a)
+print(b)
+print(c)
+
+
+Access Array Elements:
+Array indexing is the same as accessing an array element.
+referring to its index number.
+The indexes in NumPy arrays start with 0, meaning that the first element has 
+index 0, and the second element has index 1 etc.
+
+you can do:
+1. accessing of array element
+2. addition of array element
+3. slicing of array element
+
+1. import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+print(arr[0])
+
+2. perform addition:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+print(arr[2] + arr[3])
+
+
+####Access 2-D Arrays:
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('2nd element on 1st row: ', arr[0, 1])
+
+#please try to write index position for all elements:
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10],[11,12,13,14,15]])
+print(arr)
+print('value:-------- ', arr[0, 0]) # 0 is row...& 1 column...
+print('value:-------- ', arr[0, 1])
+print('value:-------- ', arr[0, 2])
+print('value:-------- ', arr[0, 3])
+print('value:-------- ', arr[0, 4])
+
+
+#####example 2 
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10],[10,11,12,13,14]])
+print(arr)
+print('2nd element on 1st row: ', arr[0, 1])
+##array elements should be equal..
+
+
+Array slicing:
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5])
+
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:6])
+
+
+####Slicing in 2D array:
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[1, 1:4])
+
+
+##3example 2:
+
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11,12,13,14,15]])
+print(arr)
+print(arr[0:3, 1:4]) # row level slicing & column level slicing
+
+
+
+
+-----------------------------------------------------------
+2. Pandas - 06/06/2023
+
+it is a data processing library....
+pan da --> panel data = panda 
+
+It is a Python library used for working with datasets 
+from different Databases.
+
+It has functions for analyzing, cleaning, exploring, 
+and manipulating data.
+
+Pandas can clean messy data sets, 
+and make them readable and relevant.
+
+Relevant data is very important in data science.
+
+Advantages::-- 
+1. Fast and efficient for manipulating and analyzing data.
+2. Data from different file objects can be loaded.
+3. Easy handling of missing data (represented as NaN). 
+
+
+
+----> Pandas installation <------
+pip install pandas (inside jupyter notebook)
+
+
+
+Version Verification:
+
+import pandas as pd
+
+print(pd.__version__)
+
+
+first example of pandas:
+
+import pandas
+
+mydataset = {
+  'name': ["ram", "shyam", "sita"],
+  'age': [3, 7, 2]
+}
+
+example----->>
+myvar = pandas.DataFrame(mydataset)
+print(myvar)
+
+import pandas
+mydataset = {
+  'name': ["ram", "shyam", "sita"],
+  'age': [3, 7, 2],
+  'city': ['Maha', "Bang", 'Hyd']
+}
+myvar = pandas.DataFrame(mydataset)
+print(myvar)
+
+
+example2:
+
+import pandas
+
+mydataset = {
+  'name': ["ram", "shyam", "sita"],
+  'age': [3, 7, 2],
+  'city': ["mumbai", "pune", "panvel"]
+}
+
+df = pandas.DataFrame(mydataset)
+print(df)
+
+
+I. Series Data types: 
+A Pandas Series is like a column in a table.
+
+It is a one-dimensional array holding data of any type.
+
+example:
+import pandas as pd
+
+lis = [1, 7, 2]
+
+seri = pd.Series(lis)
+
+print(seri)
+
+
+example2:
+import pandas as pd
+import numpy as np
+
+
+# Creating empty series
+ser = pd.Series()
+
+print(ser)
+
+# simple array
+data = np.array(['p', 'y', 't', 'h', 'o', 'n'])
+
+ser = pd.Series(data)
+print(ser)
+
+
+
+II. DataFrame Data type:
+Data sets in Pandas are usually 
+multi-dimensional tables, called DataFrames.
+
+2 dimentional = rows & coulmns
+Series is like a column, a DataFrame is the whole table.
+
+example:
+import pandas as pd
+
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+print(df["duration"])
+print(df["calories"])
+
+
+Very Important:
+
+Downloan CSV and store in folder 
+where your Ipython file is:
+
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+print(df)
+
+pandas can read below files:
+1. read_csv()
+2. read_json()
+3. read_excel()
+4. read_sql()
+etc.....
+
+
+load your dictioanry as json data as we 
+did in above program.
+
+import pandas as pd
+
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
