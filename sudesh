@@ -1,8 +1,0 @@
-class Test:
-    a=10
-    b=3
-    @classmethod
-    def m1(cls):
-        del cls.b
-Test.m1()
-print(Test.__dict__)

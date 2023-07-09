@@ -1,10 +1,21 @@
-import psycopg2 as pg
-conn=pg.connect(user='postgres',
-                password='sudesh',
-                host='127.0.0.1',
-                port='5432')
-conn.autocommit=True
-cursor1=conn.cursor()
-sql='''create database "testing-45" '''
-cursor1.execute(sql)
-print('database created')
+class Person:
+    '''this simple code i used'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+p = Person('John', 25)
+print(p.name,p.age)
+print(p.__doc__)
+class Person:
+    '''this other code used'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+if __name__ == '__main__':
+    person = Person('John', 25)
+    print(f"I'm {person.name}. I'm {person.age} years old.")
+print(person.__doc__)
